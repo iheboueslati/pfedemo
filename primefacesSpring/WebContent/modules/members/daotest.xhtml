@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head><title></title></h:head>
+<h:body>
+
+<h2>Welcome #{testController.name}</h2>
+
+ 
+
+
+			<p:dataTable value="#{testController.list}" var="type">
+				<p:column headerText="Lib">
+					<h:outputText value="#{type.lib1}">
+					</h:outputText>
+				</p:column>
+			</p:dataTable>
+
+ 
+
+</h:body>
+</html>
