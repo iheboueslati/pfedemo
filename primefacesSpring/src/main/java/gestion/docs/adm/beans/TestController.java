@@ -13,6 +13,10 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 @ManagedBean
 @SessionScoped
 public class TestController {
@@ -22,39 +26,48 @@ public class TestController {
 
 	private List<Rhnom> list = new ArrayList<Rhnom>();
     private List<String> list2 = new ArrayList<String>();
+    private List<String> list3 = new ArrayList<String>();
 
 	public String name ="iheb";
 	
 
-	
+	//DAO LIST
 public List<Rhnom> getList() {		
 	try {
 		list = documentService.getTypesDocuments();
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	return list;
-	}	
-	
-	
+	}		
+ //DAO STATIC LIST
 	public List<String> getList2() {
 		
 		try {
 			list2 = documentService.getStaticList();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return list2;
 }
 
 
+	
+public List<String> getList3() {
+	list3.add("s1");
+	list3.add("s2");
+	list3.add("s3");
+	System.out.println("returned list");
+		return list3;
+	}
+
+	public void setList3(List<String> list3) {
+		this.list3 = list3;
+	}
+
 public void setList2(List<String> list2) {
 	this.list2 = list2;
 }
-
-
 	public void setList(List<Rhnom> list) {
 	this.list = list;
 }

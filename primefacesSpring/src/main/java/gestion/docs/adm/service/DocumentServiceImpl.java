@@ -20,6 +20,14 @@ public class DocumentServiceImpl implements DocumentService {
 	private RhnomDAO rhnomDao;
 	
 
+	public RhnomDAO getRhnomDao() {
+		return rhnomDao;
+	}
+	public void setRhnomDao(RhnomDAO rhnomDao) {
+		this.rhnomDao = rhnomDao;
+	}
+
+
 	@SuppressWarnings("serial")
 	@Override
 	public List<String> getStaticList (){
@@ -28,6 +36,7 @@ public class DocumentServiceImpl implements DocumentService {
 			add("s2");
 			add("s3");
 		}};
+		System.out.println("returned list");
 		return list2;
 	}
 	

@@ -10,11 +10,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class RhnomDAOImpl implements RhnomDAO {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	
 	
+
+
 	public RhnomDAOImpl() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -49,5 +52,11 @@ public class RhnomDAOImpl implements RhnomDAO {
 	            throw re;
 	        }   }
 
-	
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
 }

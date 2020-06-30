@@ -12,9 +12,9 @@ import java.math.BigDecimal;
  * 
  */
 @Entity
-@Table(name="DEMANDES_DOCS_AMDINISTRATIFS")
-@NamedQuery(name="DemandesDocsAmdinistratif.findAll", query="SELECT d FROM DemandesDocsAmdinistratif d")
-public class DemandesDocsAmdinistratif implements Serializable {
+@Table(name="DEMANDES_DOCS_ADMINISTRATIFS")
+@NamedQuery(name="DemandesDocsAmdinistratif.findAll", query="SELECT d FROM DemandesDocsAdministratif d")
+public class DemandesDocsAdministratif implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -138,7 +138,7 @@ public class DemandesDocsAmdinistratif implements Serializable {
 	@JoinColumn(name="ETAPE_SCENARIO")
 	private ScenariosEtape scenariosEtape;
 
-	public DemandesDocsAmdinistratif() {
+	public DemandesDocsAdministratif() {
 	}
 
 	public long getIdDemandeDocAdministratif() {

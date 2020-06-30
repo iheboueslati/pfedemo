@@ -66,7 +66,7 @@ public class ScenariosEtape implements Serializable {
 
 	//bi-directional many-to-one association to DemandesDocsAmdinistratif
 	@OneToMany(mappedBy="scenariosEtape")
-	private List<DemandesDocsAmdinistratif> demandesDocsAmdinistratifs;
+	private List<DemandesDocsAdministratif> demandesDocsAmdinistratifs;
 
 	//uni-directional many-to-one association to Rhnom
 	@ManyToOne
@@ -213,22 +213,22 @@ public class ScenariosEtape implements Serializable {
 		this.objetAlerte = objetAlerte;
 	}
 
-	public List<DemandesDocsAmdinistratif> getDemandesDocsAmdinistratifs() {
+	public List<DemandesDocsAdministratif> getDemandesDocsAmdinistratifs() {
 		return this.demandesDocsAmdinistratifs;
 	}
 
-	public void setDemandesDocsAmdinistratifs(List<DemandesDocsAmdinistratif> demandesDocsAmdinistratifs) {
+	public void setDemandesDocsAmdinistratifs(List<DemandesDocsAdministratif> demandesDocsAmdinistratifs) {
 		this.demandesDocsAmdinistratifs = demandesDocsAmdinistratifs;
 	}
 
-	public DemandesDocsAmdinistratif addDemandesDocsAmdinistratif(DemandesDocsAmdinistratif demandesDocsAmdinistratif) {
+	public DemandesDocsAdministratif addDemandesDocsAmdinistratif(DemandesDocsAdministratif demandesDocsAmdinistratif) {
 		getDemandesDocsAmdinistratifs().add(demandesDocsAmdinistratif);
 		demandesDocsAmdinistratif.setScenariosEtape(this);
 
 		return demandesDocsAmdinistratif;
 	}
 
-	public DemandesDocsAmdinistratif removeDemandesDocsAmdinistratif(DemandesDocsAmdinistratif demandesDocsAmdinistratif) {
+	public DemandesDocsAdministratif removeDemandesDocsAmdinistratif(DemandesDocsAdministratif demandesDocsAmdinistratif) {
 		getDemandesDocsAmdinistratifs().remove(demandesDocsAmdinistratif);
 		demandesDocsAmdinistratif.setScenariosEtape(null);
 
